@@ -67,9 +67,26 @@ html {
 }
 
 #aboutness {
-    background-color: rgba(88,88,88,0.45)
+    background-color: rgba(66,66,66,0.55);
+    padding: 50px 50px 10px 50px;
 }
 
 #aboutness p {
     color: azure;
+
+}
+
+#murloc img {
+    opacity: 0;
+}
+
+#murloc img {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#murloc img:hover {
+  opacity: 1;
 }

@@ -6,17 +6,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/about.css">
     <script src="https://use.fontawesome.com/4c8287bdf1.js"></script>
+    <script src="/scripts/sounds.js"></script>
 </head>
-<header>
-        <div class="nav-bar">
-            <ul>
-                <li><a class="" href="/">Home</a></li>
-                <li><a class="" href="/login">Login</a></li>
-                <li><a class="active" href="/about">About</a></li>
-            </ul>
-        </div>
-</header>
 <body>
+    <header>
+            <div class="nav-bar">
+                <ul>
+                    <li><a class="" href="/">Home</a></li>
+                    <li><a class="" href="/login">Login</a></li>
+                    <li><a class="active" href="/about">About</a></li>
+                </ul>
+            </div>
+    </header>
         <div class="intro-header">
             <div class="container">
                 <div class="row">
@@ -30,17 +31,22 @@
                                 <p>This is my final project for RefactorU, I hope you enjoy it.</p>
                                 <p>One guideline we were given to help us come up with ideas for apps was to try to think of a problem in our own lives we wanted solved. 
                                 <p>I don't really have any big problems to solve, but I <b><i>do</i></b> go through a lot of ink and paper for role-playing games. See, I used to live in a big house full of gamers, and there'd always be character sheets on hand. We'd print out extras, because we knew they'd get used. </p>
-                                <p>These days, everyone's scattered to the wind, and even if we do meet up and make characters, we usually end up playing for only a handful of sessions before life gets in the way. This means that there's a cabinet in my house that's a repository for aborted campaigns and characters.</p>
+                                <p>These days, everyone's scattered to the wind, and even if we do meet up and make characters, we usually end up playing for only a handful of sessions before life gets in the way. This means that there's a cabinet in my house that's basically a repository for aborted campaigns and characters.</p>
                                 <p>Now, I figure, rather than continue to spend inordinate amounts of cash on the most expensive liquid on Earth, I'd save the planet and my pocketbook by creating a site that allows for easy digital record keeping for characters. There are a lot of good character <b><i>builder</i></b> sites out there, but not so many that allow you to retain a living document, something to replace the old "scratch sheet."</p>
-                            <div>
+                                <div id="murloc">
+                                    <img onmouseover="murloc.play()" src="/images/weeBabyMurloc.gif">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+    </div>   
+
 <footer>
-<i class="fa fa-rebel" aria-hidden="true"></i> Iron Dingo Industries
+<i onclick="lazor.play()" class="fa fa-rebel" aria-hidden="true"></i> Iron Dingo Industries
+
 </footer>
 
 </body>
