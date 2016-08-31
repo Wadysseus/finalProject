@@ -1,7 +1,7 @@
 <div class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 viewSheet">
                 <div ng-controller="campaignController as cCtrl" ng-init="cCtrl.pullOneCampaign(cCtrl.params.id)" class="intro-message">
                     <h1>Campaign Listing for {{cCtrl.currentCampaign.name}}</h1>
                     <h3> system: {{cCtrl.currentCampaign.system}} </h3>
@@ -11,7 +11,7 @@
                        
                     <ul class="profileLinks">
                         <li style="padding-top: 10px">
-                            <a type="button" class="btn btn-lg btn-warning profileLinks" href="#/"> Back </a>
+                            <a type="button" class="btn btn-lg btn-warning profileLinks" href="#/campaignList"> Back </a>
                         </li>
                     </ul>
                 </div>

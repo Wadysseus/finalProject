@@ -14,12 +14,12 @@
                                         </div>
                                         <div ng-repeat="campaign in cCtrl.campaignList track by $index" class="col-xs-12">
 
-                                            <p>~Campaign {{$index}}~</p>
+                                            <p></p>
                                             <a 
                                                 type="button" 
                                                 class="btn btn-sm btn-warning profileLinks" 
                                                 ng-href="#/api/campaigns/{{cCtrl.campaignList[$index]._id}}"
-                                            >{{ campaign.name }} {{ campaign.system }} {{ campaign.setting }} {{ campaign.schedule }}
+                                            >{{ campaign.name }}
                                             </a>
                                             <!-- Can put alt text in here once I change these to portrait <img>s.  -->
                                         </div>

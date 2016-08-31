@@ -69,6 +69,7 @@ module.exports = (app) => {
     app.get('/api/pcs', pcCtrl.get);
     app.get('/api/pcs/:id', pcCtrl.get); // Find One
     app.post('/api/pcs', pcCtrl.upsert);
+    app.post('/api/pcs/:id', pcCtrl.upsert); // Update
 
     // Campaign Routes
     app.get('/api/campaigns', cCtrl.get); // Find Many

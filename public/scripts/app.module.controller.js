@@ -9,7 +9,7 @@ userController.$inject = ['apiFactory'];
 
 // Start of pcController
 	function pcController (apiFactory, $location, $routeParams) {
-		console.debug(arguments)
+		// console.debug(arguments)
 
 		var pcCtrl = this;
 		console.log('pcController online, human.');
@@ -51,12 +51,13 @@ userController.$inject = ['apiFactory'];
 			pcCtrl.currentPC = apiFactory.sampleData[0];
 		}
 
-		// pcCtrl.itemToAdd = '';
-		// pcCtrl.addItem = (pcCtrl.itemToAdd) => {
-		// 	console.log('itemToAdd: ', pcCtrl.itemToAdd)
-		// 	pcCtrl.currentPC.inventory.push(pcCtrl.itemToAdd)
-		// }
-
+		pcCtrl.itemToAdd = '';
+		itemToAdd = pcCtrl.itemToAdd;
+		pcCtrl.addItem = (itemToAdd) => {
+			console.log('itemToAdd: ', itemToAdd)
+			pcCtrl.currentPC.inventory.push(itemToAdd)
+		}
+		// .then(apiFactory.addToInventory(itemToAdd)
 	}
 // End of pcController 
 
@@ -64,7 +65,7 @@ userController.$inject = ['apiFactory'];
 	function campaignController (apiFactory, $location, $routeParams) {
 		var cCtrl = this;
 		console.log('campaignController online, human.');
-		console.debug(arguments)
+		// console.debug(arguments)
 
 		cCtrl.submitCampaign = () => {
 			apiFactory

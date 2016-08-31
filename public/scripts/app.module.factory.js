@@ -13,18 +13,13 @@ angular.module('crAPI')
 	        return $http.post('/api/pcs', pcData)
 	    }
 
-	    // function retrieveOnePC (query) {
-	    // 	console.log('retrieveOnePC: ', query);
-     //        return $http.get('/api/pcs/' + query);
-     //    }
-
 	    function retrieveOnePC (id) {
 			console.log('id: ', id);
             return $http.get('/api/pcs/' + id);
         }
 
         function addToInventory (itemData){
-        	return $http.post('/api/pcs', itemData)
+        	return $http.post('/api/pcs/' + id, itemData)
         }
 
 	    function retrieveCampaigns (){
