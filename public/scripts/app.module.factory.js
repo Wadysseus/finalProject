@@ -18,8 +18,10 @@ angular.module('crAPI')
             return $http.get('/api/pcs/' + id);
         }
 
-        function addToInventory (itemData){
-        	return $http.post('/api/pcs/' + id, itemData)
+        function addToInventory (id, itemToAdd){
+        	console.log('Factory PC-id: ', id);
+        	console.log('Factory item: ', itemToAdd);
+        	return $http.post('/api/pcs/' + id, itemToAdd)
         }
 
 	    function retrieveCampaigns (){
@@ -62,6 +64,7 @@ angular.module('crAPI')
 	        retrievePCs 		: retrievePCs,
 	        createPC			: createPC,
 	        retrieveOnePC		: retrieveOnePC,
+	        addToInventory		: addToInventory,
 	        retrieveCampaigns   : retrieveCampaigns,
 	        retrieveOneCampaign : retrieveOneCampaign,
 	        createCampaign  	: createCampaign,

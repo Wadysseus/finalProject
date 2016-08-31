@@ -28,7 +28,7 @@ module.exports = {
         if(req.params.id){
             // Update existing document
             console.log(req.params)
-            PC.update({ _id : req.params.id}, {$set: {inventory: req.params.inventory}})
+            PC.update({ '_id' : req.params.id}, {$set: {inventory: req.params.inventory}})
         }
         else {
             // No id in the url, create a new document

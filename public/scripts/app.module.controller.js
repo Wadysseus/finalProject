@@ -52,13 +52,30 @@ userController.$inject = ['apiFactory'];
 		}
 
 		pcCtrl.itemToAdd = '';
-		itemToAdd = pcCtrl.itemToAdd;
-		pcCtrl.addItem = (itemToAdd) => {
-			console.log('itemToAdd: ', itemToAdd)
-			pcCtrl.currentPC.inventory.push(itemToAdd)
+
+
+
+		pcCtrl.reallyAddItem = (id, itemToAdd) => {
+			console.log('reallyAddItem _id: ', id)
+			console.log('reallyAddItem item: ', itemToAdd)
+			apiFactory.addToInventory(id, itemToAdd)
+				.then(function(res){
+
+						console.log('res: ', res)
+
+				})
+
+
+			// console.log(itemToAdd)
+			// pcCtrl.addItem(itemToAdd)
+			// 	.then(apiFactory.addToInventory(itemToAdd))
 		}
-		// .then(apiFactory.addToInventory(itemToAdd)
-	}
+
+		// pcCtrl.addItem = (itemToAdd) => {
+		// 	console.log('itemToAdd: ', itemToAdd)
+		// 	pcCtrl.currentPC.inventory.push(itemToAdd)
+		// }
+}		
 // End of pcController 
 
 // Start of campaignController
