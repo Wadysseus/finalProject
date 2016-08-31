@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="crAPI">
+
+<head>
+    <title>Profile Home</title>
+    <script type= "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js'></script>
+    <script type="text/javascript" src="../scripts/app.module.js"></script>
+    <script type="text/javascript" src="../scripts/app.module.controller.js"></script>
+    <script type="text/javascript" src="../scripts/app.module.factory.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/profileHome.css">
+    <script src="https://use.fontawesome.com/4c8287bdf1.js"></script>
+</head>
+
+<body>
+<header ng-controller="userController as uCtrl" >
+        <div class="nav-bar">
+            <ul>
+                <!-- ng-init="uCtrl.pullUser()" -->
+                <li><a class="" href="#/">Home</a></li>
+                <li><a class="active" href="#">{{uCtrl.currentUser.name}}'s Profile</a></li>
+                <!-- <li><a class="" href="/about">About</a></li> -->
+                <li><a id="logoutLink" href="/logout">Logout</a></li>
+            </ul>
+        </div>
+</header>
+    <div ng-view=''>
+
+    </div>
+        
+<footer>
+<i class="fa fa-rebel" aria-hidden="true"></i> Iron Dingo Industries
+</footer>
+
+</body>
+
+</html>

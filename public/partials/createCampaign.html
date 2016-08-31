@@ -1,0 +1,49 @@
+<div class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <h2>Let's make a campaign!</h2>
+                        <hr class="intro-divider" />
+                            <h4>Your imagination is your canvas!</h4>
+                                <section ng-controller="campaignController as cCtrl">
+                                    <form class="form-inline" 
+                                    ng-submit="cCtrl.submitCampaign();">
+                                    <!-- cCtrl.newCampaign.name='';cCtrl.newCampaign.system='';cCtrl.newCampaign.setting='';cCtrl.newCampaign.schedule=''; -->
+                                        <div class="form-group">
+                                            <fieldset class="input-group">
+                                                <input ng-model="cCtrl.newCampaign.name" class="form-control" type="text" name="name" placeholder="Name">
+                                            </fieldset>
+
+                                            <fieldset class="input-group">
+                                                <input ng-model="cCtrl.newCampaign.system" class="form-control" type="text" name="system" placeholder="System"/>
+                                            </fieldset>
+
+                                            <fieldset class="input-group">
+                                                <input ng-model="cCtrl.newCampaign.setting" class="form-control" type="text" name="setting" placeholder="Setting"/>
+                                            </fieldset>
+
+                                            <fieldset class="input-group">
+                                                <input ng-model="cCtrl.newCampaign.schedule" class="form-control" type="text" name="schedule" placeholder="Schedule"/>
+                                            </fieldset>
+                                                <button type="submit" class="btn btn-default">Submit</button>
+                                            <!-- TURN THIS BUTTON INTO AN ANCHOR AND HAVE IT REDIRECT TO campaignList.html -->
+
+                                        </div>
+                                    </form>
+                                </section>
+
+                        <div>
+                            <ul class="profileLinks">
+                                <li>
+                                    <a type="button" class="btn btn-lg btn-warning profileLinks" href="#/create"> Back </a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,21 @@
+<div class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div ng-controller="campaignController as cCtrl" ng-init="cCtrl.pullOneCampaign(cCtrl.params.id)" class="intro-message">
+                    <h1>Campaign Listing for {{cCtrl.currentCampaign.name}}</h1>
+                    <h3> system: {{cCtrl.currentCampaign.system}} </h3>
+                    <h3> setting: {{cCtrl.currentCampaign.setting}} </h3>
+                    <h3> schedule: {{cCtrl.currentCampaign.schedule}}</h3>
+                    <h3> active: {{cCtrl.currentCampaign.ongoing}} </h3>
+                       
+                    <ul class="profileLinks">
+                        <li style="padding-top: 10px">
+                            <a type="button" class="btn btn-lg btn-warning profileLinks" href="#/"> Back </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <h1>crAPI</h1>
+                    <h3>(c)haracter (r)ecord API</h3>
+                    <hr class="intro-divider" />
+                        <div>
+                            <section ng-controller="pcController as pcCtrl" ng-init="pcCtrl.listPCs()">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h1>(P)layer (C)haracter Roster : </h1>
+                                        </div>
+                                        <div ng-repeat="pc in pcCtrl.pcList track by $index" class="col-xs-12">
+                                            <p>~PC {{$index}}~</p>
+                                            <a 
+                                                type="button" 
+                                                class="btn btn-sm btn-warning profileLinks"
+                                                ng-href="#/api/pcs/{{pcCtrl.pcList[$index]._id}}"
+                                            >{{ pc.name }} the level {{ pc.level }} {{ pc.race }} {{ pc.characterClass }}
+                                            </a>
+                                            <!-- Can put alt text in here once I change these to portrait <img>s.  alt="{{pc.name}}'s profile"-->
+                                                    
+                                        </div>
+                                    </div>
+                            </section>
+                            <ul class="profileLinks">
+                                <li style="padding-top: 10px">
+                                    <a type="button" class="btn btn-lg btn-warning profileLinks" href="#/"> Back </a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
