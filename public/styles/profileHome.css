@@ -88,6 +88,8 @@ ul {
 
 .profileLinks a{
     opacity: 0.9;
+    margin-top: 10px;
+    margin-right: 40px;
 }
 
 .profileLinks a:hover{
@@ -102,4 +104,8 @@ ul {
 #inventoryAdd {
     margin: 0 auto;
     width: 200px;
+}
+
+.addItemBtn {
+    margin-top: 10px;
 }

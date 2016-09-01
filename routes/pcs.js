@@ -28,7 +28,9 @@ module.exports = {
         if(req.params.id){
             // Update existing document
             console.log(req.params)
-            PC.update({ '_id' : req.params.id}, {$set: {inventory: req.params.inventory}})
+            PC.update({ '_id' : req.params.id}, {$push: {inventory: req.body.item}}, function (err, item){
+                res.send('Cool.')
+            })
         }
         else {
             // No id in the url, create a new document

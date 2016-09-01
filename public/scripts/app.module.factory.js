@@ -21,7 +21,7 @@ angular.module('crAPI')
         function addToInventory (id, itemToAdd){
         	console.log('Factory PC-id: ', id);
         	console.log('Factory item: ', itemToAdd);
-        	return $http.post('/api/pcs/' + id, itemToAdd)
+        	return $http.post('/api/pcs/' + id, {item : itemToAdd})
         }
 
 	    function retrieveCampaigns (){
