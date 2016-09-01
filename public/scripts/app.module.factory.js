@@ -17,11 +17,20 @@ angular.module('crAPI')
 			console.log('id: ', id);
             return $http.get('/api/pcs/' + id);
         }
+        function updatePC (id, PC){
+        	return $http.post('/api/pcs/' + id, PC)
 
+        }
         function addToInventory (id, itemToAdd){
         	console.log('Factory PC-id: ', id);
         	console.log('Factory item: ', itemToAdd);
         	return $http.post('/api/pcs/' + id, {item : itemToAdd})
+        }
+
+        function transmitHP (id, hpChange){
+        	console.log('Factory PC-id: ', id);
+        	console.log('Factory hpChange: ', hpChange);
+        	return $http.post('/api/pcs/' + id, {hitPoints : hpChange})
         }
 
 	    function retrieveCampaigns (){
@@ -65,12 +74,14 @@ angular.module('crAPI')
 	        createPC			: createPC,
 	        retrieveOnePC		: retrieveOnePC,
 	        addToInventory		: addToInventory,
+	        transmitHP			: transmitHP,
 	        retrieveCampaigns   : retrieveCampaigns,
 	        retrieveOneCampaign : retrieveOneCampaign,
 	        createCampaign  	: createCampaign,
 	        retrieveUser 		: retrieveUser,
 	        samplePC			: samplePC,
 	        sampleData			: sampleData,
+	        updatePC			: updatePC
 
 	    }
 

@@ -27,10 +27,30 @@ module.exports = {
         // Create / Update
         if(req.params.id){
             // Update existing document
-            console.log(req.params)
-            PC.update({ '_id' : req.params.id}, {$push: {inventory: req.body.item}}, function (err, item){
-                res.send('Cool.')
-            })
+
+            // var updater = {};
+            // if(req.body.item){
+            //     updater.$push = {inventory : req.body.item}
+            // }
+            // if(req.body.hitPoints){
+            //     updater.$inc = {hitPoints : req.body.hitPoints}
+            // }
+           
+            // console.log('req.body: ', req.body)
+            // PC.update({ '_id' : req.params.id}, 
+            //     updater, 
+            //     function (err, item){
+            //         console.log(err, item)
+            //     res.send('Cool. Cool cool cool.')
+            // })            
+
+            // Might be easier to send req.body and update everything every time
+            PC.update({ '_id' : req.params.id}, 
+                req.body, 
+                function (err, item){
+                    console.log(err, item)
+                res.send('Cool. Cool cool cool.')
+            })    
         }
         else {
             // No id in the url, create a new document

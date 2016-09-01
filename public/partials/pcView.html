@@ -14,6 +14,12 @@
                                 <li><input value="1" type="number"></li>
                             </ul> -->
                             <!-- End of HP section -->
+                            <p>HP: {{pcCtrl.currentPC.hitPoints}} 
+                                <form ng-submit="pcCtrl.modifyHitPoints(pcCtrl.currentPC._id, pcCtrl.hpChange)">
+                                    <input ng-model="pcCtrl.hpChange" id="hitPointTracker" type="number" placeholder="Add/Subtract HP">
+                                    <button class="btn btn-sm btn-warning" type="submit">Add/Subtract HP</button>
+                                </form>
+                            </p>
                              <p><strong>Inventory:</strong></p>
                             <ul ng-repeat="item in pcCtrl.currentPC.inventory track by $index">
                                 <li>{{item}}</li>

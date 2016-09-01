@@ -109,3 +109,8 @@ ul {
 .addItemBtn {
     margin-top: 10px;
 }
+
+#hitPointTracker {
+    margin-left: 10px;
+    color: black;
+}

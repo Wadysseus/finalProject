@@ -58,17 +58,28 @@ userController.$inject = ['apiFactory'];
 		pcCtrl.reallyAddItem = (id, itemToAdd) => {
 			console.log('reallyAddItem _id: ', id)
 			console.log('reallyAddItem item: ', itemToAdd)
-			apiFactory.addToInventory(id, itemToAdd)
+			pcCtrl.currentPC.inventory.push(itemToAdd)
+			apiFactory.updatePC(id, pcCtrl.currentPC)
 				.then(function(res){
-
-						console.log('res: ', res)
-
+					console.log(res)
 				})
-
-
+			// apiFactory.addToInventory(id, itemToAdd)
+			// 	.then(function(res){
+			// 			// console.log('res: ', res)
+			// 	})
 			// console.log(itemToAdd)
 			// pcCtrl.addItem(itemToAdd)
 			// 	.then(apiFactory.addToInventory(itemToAdd))
+		}
+
+		pcCtrl.modifyHitPoints = (id, hpChange) => {
+			console.log('modifyHitPoints _id: ', id)
+			console.log('modifyHitPoints hpChange: ', hpChange)
+			pcCtrl.currentPC.hitPoints += hpChange;
+			apiFactory.transmitHP(id, hpChange)
+				.then(function(res){
+					console.log('modifyHitPoints res: ', res)
+				})
 		}
 
 		// pcCtrl.addItem = (itemToAdd) => {
